@@ -5,7 +5,7 @@ from django.core.validators import RegexValidator
 class Member(models.Model):
     firstname = models.CharField(max_length=255)
     lastname = models.CharField(max_length=255)
-    phone = models.IntegerField(
+    phone = models.CharField(
         max_length=15, 
         null=True,
         validators=[RegexValidator(r'^\+?\d{10,15}$', 'Enter a valid phone number')]
