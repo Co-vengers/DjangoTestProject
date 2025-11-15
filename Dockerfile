@@ -1,5 +1,8 @@
 FROM python:3.10-slim-buster
 
+ENV PYTHONDONTWRITEBYTECODE=1 \
+PYTHONUNBUFFERED=1
+
 WORKDIR /app
 
 COPY requirements.txt requirements.txt
